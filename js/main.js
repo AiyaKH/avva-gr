@@ -1,30 +1,30 @@
-var form = document.getElementById("my-form");
-  
-async function handleSubmit(event) {
-  event.preventDefault();
-  var status = document.getElementById("my-form-status");
-  var data = new FormData(event.target);
-  fetch(event.target.action, {
-    method: form.method,
-    body: data,
-    headers: {
-        'Accept': 'application/json'
+"use strict"
+
+const titles = document.querySelectorAll('.accordion_title');
+const contents = document.querySelectorAll('.accordion_content');
+
+titles.forEach(item => item.addEventListener('click',() => {
+    const activeContent = document.querySelector('#' + item.dataset.tab);
+
+    if (activeContent.classList.contains('active')) {
+        activeContent.classList.remove('active');
+        item.classList.remove('active');
+        activeContent.style.maxHeight = 0;
+    } 
+    else {
+        contents.forEach ( Element => {
+            Element.classList.remove('active');
+            Element.style.maxHeight = 0;
+        });
+
+        titles.forEach(Element => Element.classList.remove('active'));
+
+        item.classList.add('active');
+        activeContent.classList.add('active');
+        activeContent.style.maxHeight = activeContent.scrollHeight + "px";
     }
-  }).then(response => {
-    if (response.ok) {
-      status.innerHTML = "Спасибо, наш менеджер свяжется с вами!";
-      form.reset()
-    } else {
-      response.json().then(data => {
-        if (Object.hasOwn(data, 'errors')) {
-          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-        } else {
-          status.innerHTML = "Что-то пошло не так"
-        }
-      })
-    }
-  }).catch(error => {
-    status.innerHTML = "Что-то пошло не так"
-  });
-}
-form.addEventListener("submit", handleSubmit)
+}))
+
+// document.querySelector('[data-tab="tab-3"]').classList.add('active');
+// document.querySelector('#tab-1').classList.add('active');
+// document.querySelector('#tab-1').style.maxHeight = document.querySelector('#tab-1').scrollHeight + "px";
