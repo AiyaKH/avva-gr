@@ -8,7 +8,7 @@
   @font-face {
     font-family: "Muller-Trial"; 
     src: url("../fonts/Muller-Trial-Bold.ttf") format("truetype"); 
-    font-style: normal; 
+    font-style: bold; 
     font-weight: 600; 
   } 
   @font-face {
@@ -26,7 +26,7 @@
   @font-face {
     font-family: "Mulish_B"; 
     src: url("../fonts/Mulish-Bold.ttf") format("truetype"); 
-    font-style: normal; 
+    font-style: bold; 
     font-weight: 700; 
   }
 
@@ -35,494 +35,356 @@ html{
     background-color: #EBECF6;
 }
 body{
-    margin-left: 3.5vw;
-    margin-right: 3.5vw;
+    min-width: 1170px;
 }
-@media (max-width: 1900px) {
-    .oborud{
-        display: block;
-        margin-top: 3vw;
-        max-width: 1440px;
-        padding: 0 10px;
-        margin: 0 auto;
-    }
-
-    .about{
-        display: block;
-        margin-top: 3vw;
-        max-width: 1440px;
-        padding: 0 10px;
-        margin: 0 auto;
-    }
-
-    .service{
-        margin-top: 3vw;
-            display: block;
-            margin-top: 3vw;
-            max-width: 1440px;
-            padding: 0 10px;
-            margin: 0 auto;
-      }
-
-      p{
-        font-size: 24px;
-      }
-      li{
-        font-size: 24px;
-      }
-
-}
-
-@media screen and (min-width: 1023px) and (max-width: 1366px){
-    .container{
-        width: 1023px;
-    }
-    .container_start{
-        width: 1023px;
-    }
-    /* .start_inner{
-
-        background-image: url("../images/general_1024.svg");
-    } */
-    }
 
 
 *{
     box-sizing: inherit;
 }
+div{
+    vertical-align: baseline;
+}
+a {
+    outline: none !important;
+}
 
-    .container,
-    .container_start{
-        max-width: 1440px;
-        padding: 0 10px;
-        margin: 0 auto;
+
+.content{
+    padding: 109px 109px;
+    width: 970px !important;
+}
+
+ .header{
+        overflow: hidden;
+        padding: 30px 0;
         background-color: white;
     }
-    .header_inner{
+
+.row{
         display: flex;
-        justify-content: space-between;
-        }
-    .header_title{
-            font-family: "Nixmat";
-            font-size: 32px;
-            color: black;
-            line-height: 2.9;
+        margin-left: 15px;
+        margin-right: -15px;
+        height: inherit;
+    }
+    
+.h-left{
+        display: flex;
     }
 
-    .start_inner{
+.col-xs-6 {
+        /* float: left; */
+        width: 50%;
+        position:relative;
+        padding-left: 109px;
+        padding-right: 15px
+    }
+
+.h-logo {
+        float: left;
+        padding-top: 13px;
+    }
+.h-logo img {
+        border: none;
+    }
+.h-siteslogan {
+        display: inline-block;
         overflow: hidden;
-        justify-content: center;
-    }
-    
-    
-    .about{
-        display: block;
-        margin-top: 3vw;
-        max-width: 1440px;
-    }
-    .container_about{
-        display: block;
-        margin-top: 3vw;
-        max-width: 1440px;;
-    }
-    .about_title,
-    .service_title{
-        margin-left: 1.2vw;
-        font-family: "Muller-Trial";
-        font-weight: 600;
-        font-size: 64px;
+        padding: 30px 7px 20px;
         color: black;
-        line-height: 2.9;
-    }
-    .about_text{
-        margin-left: 1.2vw;
-        font-family: "Mulish";
-        font-weight: 400;
-        padding-right: 15vw;
-        font-size: 20px;
-        color: black;
-        line-height: 2;
-    }
-    .about_slider{
-        overflow: hidden;
-        justify-content: center;
-    }
-    .swiper-wrapper{
-        display: flex;
-        animation: scroll 30s linear infinite;
-        display: flex;
-        width: calc(250px * 14);
-    }
-      .swiper-slide img {
-        margin-right: 10%;
-        margin-top: 5vw;
-      }
-        
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-    
-    
-      .service{
-        margin-top: 3vw;
-            display: block;
-            margin-top: 3vw;
-            max-width: 1440px;
-      }
-     .service_textbox{
-        margin-top: -2vw;
-      }
-      .service_text{
-        margin-left: 1.2vw;
-        font-family: "Mulish";
-        font-weight: 400;
-        font-size: 20px;
-        color: black;
-        line-height: 1.2;
-        max-width: 85%;
-      }
-      .service_text li{
-        list-style:disc;
-        line-height:2;
-    }
-      .service_human{
-        background-image: url("../images/slider3.svg");
-        max-width: 1400px;
-        max-height: 600px;
-        color: white;
-        justify-content: center;
-        margin-left: 1.2vw;
-        margin-top: 10vw;
-      }
-    .service_human h2{
-        margin-top: 4vw;
-        font-family: "Muller-Trial";
-        font-weight: 600;
-        font-size: 90px;
-        -webkit-text-stroke: 7px #393E84;
-        line-height: 2;
-        text-align: center;
-    }
-    .service_human_content li{
-        margin-top: 2vw;
-        margin-left: 1.2vw;
-        max-width: 70%;
-        font-family: "Mulish";
-        font-weight: 400;
-        font-size: 24px;
-        color: black;
-        line-height: 1.5;
-        list-style-type: disc;
-    
-    }
-    .plus h2{
-        font-family: "Muller-Trial";
-        font-weight: 600;
-        font-size: 56px;
-        margin-top: 10vw;
-        max-width: 1400px;
-        max-height: 600px;
-        color: black;
-        text-align: center;
-    }
-    .plus img{
-        margin-top: 5vw;
-        max-width: 1300px;
-    }
-    .trening_slider{
-        overflow: hidden;
-        justify-content: center;
-    }
-    .trening h2{
-        font-family: "Muller-Trial";
-        font-weight: 600;
-        font-size: 56px;
-        margin-top: 10vw;
-        max-height: 600px;
-        color: black;
-        text-align: center;
-    }
-    .trening h3{
-        margin-top: 3.5vw;
-        margin-left: 1.2vw;
-        font-family: "Muller-Trial";
-        font-weight: 400;
-        font-size: 35px;
-        color: #393E84;
-        line-height: 1.5;
-        text-align: center;
-    }
-    .trening p{
-        margin-top: 2vw;
-        margin-left: 1.2vw;
-        font-family: "Mulish";
-        font-weight: 400;
-        font-size: 24px;
-        color: black;
-        line-height: 1.5;
-        text-align: center;
-    }
-    .trening ol{
-        column-count: 3;
-        list-style-type: disc;
-        margin-top: 3vw;
-        margin-left: 10vw;
-        font-family: "Mulish";
-        font-weight: 400;
-        font-size: 5px;
-        color: black;
-        line-height: 2;
-        align-items: center;
-    }
-    .trening li {
-        margin-top: 3vw;
-        font-family: "Mulish";
-        font-weight: 400;
-        font-size: 20px;
-    }
-    
-    .service_it{
-        background-image: url("../images/slider4.svg");
-        max-width: 1400px;
-        max-height: 600px;
-        color: white;
-        justify-content: center;
-        margin-left: 1.2vw;
-        margin-top: 10vw;
-      }
-      .service_it h2{
-        margin-top: 4vw;
-        font-family: "Muller-Trial";
-        font-weight: 600;
-        font-size: 90px;
-        -webkit-text-stroke: 7px #393E84;
-        line-height: 2;
-        margin-left: 16vw;
-      }
-    .service_it_content  h3{
-            margin-top: 4vw;
-            margin-left: 1.2vw;
-            font-family: "Muller-Trial";
-            font-weight: 400;
-            font-size: 30px;
-            color: #393E84;
-            line-height: 1.5;
-    }
-    
-    .service_it_content  h4{
-        margin-top: 4vw;
-        margin-left: 1.2vw;
-        font-family: "Muller-Trial";
-        font-weight: 400;
-        font-size: 30px;
-        color: black;
-        line-height: 1.5;
-    }
-    
-    .service_it_content p{
-        margin-top: 2vw;
-        margin-left: 1.2vw;
-        font-family: "Mulish";
-        font-weight: 400;
-        font-size: 24px;
-        color: black;
-        line-height:2;
-        max-width: 85%;
-    }
-    .it_plus img{
-        max-width: 1300px;
-        margin-top: 5vw;
-    }
-    .it_service{
-        margin-top: 2vw;
-        margin-left: 1.2vw;
-        font-family: "Mulish";
-        font-weight: 400;
-        font-size: 24px;
-        color: black;
-        line-height: 1.5;
-        max-width: 85%;
-        list-style: square;
-    }
-    
-    .service_business{
-        background-image: url("../images/slider6.svg");
-        max-width: 1400px;
-        max-height: 600px;
-        color: white;
-        justify-content: center;
-        margin-left: 1.2vw;
-        margin-top: 10vw;
-    }
-    .service_business h2{
-        margin-top: 4vw;
-        font-family: "Muller-Trial";
-        font-weight: 600;
-        font-size: 90px;
-        -webkit-text-stroke: 7px #393E84;
-        line-height:1.2;
-        margin-left: 20vw;
-    }
-    .business_plus h3{
-        font-family: "Muller-Trial";
-        font-weight: 600;
-        font-size: 56px;
-        margin-top: 5vw;
-        max-height: 600px;
-        color: black;
-        
-    }
-    .business_plus h4{
-        margin-top: 2vw;
-        font-family: "Muller-Trial";
-        font-weight: 400;
-        font-size: 35px;
-        color: #393E84;
-        line-height: 1.5;
-    }
-    .business_plus img{
-        max-width: 1440px;
-        margin-top: 5vw;
-        justify-content: center ;
-
-    }
-
-
-    
-    .oborud_title{
-        background-image: url("../images/slider7.svg");
-        max-width: 1400px;
-        max-height: 600px;
-        color: white;
-        justify-content: center;
-        margin-left: 1.2vw;
-        margin-top: 10vw;
-        text-align: center;
-    }
-    .oborud_title{
-        margin-top: 5vw;
-        font-family: "Muller-Trial";
-        font-weight: 600;
-        font-size: 90px;
-        -webkit-text-stroke: 7px #393E84;
-        line-height:1.2;
-        margin-left: 1.2vw;
-        margin-top: 10vw;
-    }
-    .oborud_content p{
-        margin-top: 4vw;
-        margin-left: 1.2vw;
-        font-family: "Mulish";
-        font-weight: 400;
-        font-size: 24px;
-        color: black;
-        line-height: 2;
-        max-width: 90%;
-    }
-    .oborud_content h4{
-        margin-top: 2vw;
-        margin-left: 1.2vw;
-        font-family: "Mulish";
-        font-weight: 400;
-        font-size: 30px;
-        color: #393E84;
-        line-height: 1.5;
-        max-width: 90%;
-    }
-    
-    .container_footer{
-        padding: 0 10px;
-        margin: 100px 0 auto;
-        background-color: rgb(0, 0, 0);
-    }
-    .footer_title{
-        font-family: "Muller-Trial";
-        font-weight: 600;
-        font-size: 36px;
-        color: #8588B6;
-        line-height: 2.9;
-        margin-left: 1.2vw;
-        column-count: 2;
-    }
-    .footer_inner p{
-        font-family: "Mulish";
-        font-weight: 400;
-        font-size: 24px;
-        color: white;
-        line-height: 1.5;
-        margin-top: 1.1vw;
-        margin-left: 1.2vw;
-    }
-    .foter_logo{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 4vw;
-        margin-left: 35vw;
-    }
-    .footer_title_name{
-        font-family: "Nixmat";
         font-size: 32px;
-        color: gray;
-        line-height: 2.9;
+        line-height: 1.6em;
+        line-height: 140%;
+        font-family: "Nixmat";
+        font-weight: normal;
     }
-    .zayavka{
-        font-family: "Muller-Trial";
-        font-weight: 600;
-        font-size: 36px;
-        color: white;
-        line-height: 2.9;
-        margin-left: 1.2vw;
-        margin-top: 2vw;
-    }
-    form{
-        display: flex;
-        flex-direction: column;
-    }
-    .name{
-        margin-left: 1.2vw;
-        width: 400px; 
-        height: 60px; 
-        background:#8588B6;
+
+.col-xs-3 {
+        width: 25%;
         position: relative;
-        border-radius: 10px;
+        padding-left: 15px;
+        padding-right: 109px;
     }
-    .phone{
-        margin-left: 1.2vw;
-        margin-top: 1vw;
-        width: 300px; 
-        height: 60px; 
-        background: #8588B6;
-        position: relative;
-        border-radius: 10px;
+
+.h-right{
+        text-align: right;
     }
-    ::placeholder{
+    
+.btn-red {
+        color: #fff;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        background: #393E84;
+        padding: 17px 20px;
+        width: 225px;
+        height: 90px;
+    }
+.btn-red:hover,
+.btn-red:focus {
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+        color: #fff;
+        text-decoration: none;
+}
+
+.btn{
+        border-radius: 15px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         font-family: "Mulish";
         font-weight: 400;
-        font-size: 20px;
-        color: white;
-        line-height: 1.5;
-    }
-    input{
-        font-family: "Mulish";
-        font-weight: 400;
-        font-size: 20px;
-        color: white;
-        line-height: 1.5;
-    }
-    button{
-        width: 120px; 
-        height: 40px; 
-        position: relative;
-        border-radius: 10px;
-        margin-left: 1vw;
-        margin-top: 1.2vw;
+        font-size: 1.07692em;
+        line-height: 100%;
+        padding: 20px 10px;
+        line-height: 3em;
+        text-align: center;
+        outline: none;
     }
 
-   
+.btn {
+        -webkit-transition: opacity 0.3s ease;
+        -moz-transition: opacity 0.3s ease;
+        -ms-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;
+      }
 
+.main-slider-wrapper {
+        padding: 45px 0;
+        background: #f0f0f0;
+        margin-top: -2px;
+}
 
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.slider,
+.oborud{
+    overflow: hidden;
+    display: flex;
+}
+.swiper-wrapper{
+    display: flex;
+    animation: scroll 15s linear infinite;
+    width: calc(250px * 14);
+}
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .about{
+    max-width: 1222px;
+    padding: 120px 0;
+  }
+  .row_about,
+  .row_service,
+  .row_oborud{
+    margin-left: 15px;
+    margin-right: -15px;
+    height: inherit;
+  }
+  .about_title,
+  .about_content,
+  .about_list,
+  .service_title,
+  .accordion,
+  .oborud_title,
+  .oborud_content{
+    max-width: 1222px;
+    width: 100%;
+    position:relative;
+    padding-left: 109px;
+    padding-right: 15px;
+  }
+
+.about_title h1,
+.service_title h1,
+.oborud_title h1{
+    font-family:"Muller-Trial" ;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100%;
+}
+.about_content p{
+    font-family:"Mulish" ;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 133%;
+    
+}
+.content_bold{
+    font-family:"Mulish_B" ;
+    font-weight: 700;
+    line-height: 100%;
+    font-size: 20px;
+}
+.about_list{
+    margin-top: 40px;
+}
+.about_list li{
+    font-family:"Mulish" ;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 133%;
+    color: #393E84;
+}
+
+.service{
+    max-width: 1222px;
+}
+
+.accordion{
+    padding-top: 40px ;
+}
+.accordion_title{
+    line-height: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 36px;
+    font-family: "Muller-Trial";
+    color: white;
+    font-weight: 600;
+    padding: 30px 20px;
+    cursor: pointer;
+    border-radius: 35px;
+    background-color: #393E84;
+}
+.accordion_title.active span{
+    transform: rotate(45deg);
+}
+.accordion_title span{
+    display: inline-flex;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    transform: rotate(0);
+    transition: transform 0.5s ease-out;
+}
+.accordion_title span::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+.accordion_title span::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+.accordion_content{
+    padding: 10px 50px;
+    overflow: hidden;
+    box-sizing: content-box;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.1s ease-out 0.5s, visibility 0.1s ease-out 0.5s;
+}
+.accordion_content h4{
+    margin-top: 30px;
+    font-size: 36px;
+    font-family: "Muller-Trial";
+    font-weight: 400;
+    color: #393E84;
+    line-height: 1.3;
+}
+@counter-style vil {
+    system: fixed;
+    symbols: v v v v v v v v v v v v v v v v v v v v v v v v v v v ;
+    suffix: " ";
+  }
+.accordion_content li{
+    margin-top: 15px;
+    font-size: 20px;
+    font-family: "Mulish";
+    font-weight: 400;
+    color: black;
+    line-height: 2;
+    list-style: vil;
+}
+.accordion_content.active{
+    opacity: 1;
+    visibility: visible;
+    padding: 20px;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out, opacity 0.1s ease-out, visibility 0.1s ease-out;
+}
+.accordion_content img{
+    max-width: 1222px;
+    margin-top: 20px;
+}
+.accordion_content p{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-family: "Mulish";
+    font-weight: 600;
+    color: #393E84;
+    line-height: 2;
+}
+
+.oborud_title{
+    margin-top: 60px;
+}
+.oborud_content p{
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: "Mulish";
+    font-weight: 400;
+    color: black;
+    line-height: 2;
+}
+.oborud_content img{
+    margin-top: 30px;
+}
+
+.footer {
+    padding: 0 10px;
+    margin: 100px 0 auto;
+    border-top: 3px solid #393E84;
+}
+.f-contacs h3 {
+    float: left;
+    margin: 28px 0;
+    width: 50%;
+    margin-top: 30px;
+    font-size: 36px;
+    font-family: "Muller-Trial";
+    font-weight: 600;
+    color: black;
+    line-height: 1.3;
+}
+.f-contacs h4{
+    margin: 28px 0;
+    width: 50%;
+    margin-top: 30px;
+    font-size: 36px;
+    font-family: "Mulish";
+    font-weight: 400;
+    color: #393E84;
+    line-height: 1.3;
+    text-align: center;
+}
