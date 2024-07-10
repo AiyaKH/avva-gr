@@ -261,7 +261,6 @@ a {
     padding: 30px 20px;
     cursor: pointer;
     border-radius: 35px;
-    background-color: #393E84;
 }
 .accordion_title.active span{
     transform: rotate(45deg);
@@ -314,7 +313,7 @@ a {
 }
 @counter-style vil {
     system: fixed;
-    symbols: v v v v v v v v v v v v v v v v v v v v v v v v v v v ;
+    symbols: ;
     suffix: " ";
   }
 .accordion_content li{
@@ -323,8 +322,8 @@ a {
     font-family: "Mulish";
     font-weight: 400;
     color: black;
-    line-height: 2;
-    list-style: vil;
+    line-height: 1.5;
+    list-style: square;
 }
 .accordion_content.active{
     opacity: 1;
