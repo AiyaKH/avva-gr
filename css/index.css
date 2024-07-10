@@ -318,7 +318,7 @@ a {
     font-weight: 400;
     color: black;
     line-height: 1.5;
-    list-style: square;
+    list-style-type: disc;
 }
 .accordion_content.active{
     opacity: 1;
