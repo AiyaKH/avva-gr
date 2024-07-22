@@ -10,7 +10,30 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+          $('.header a').each(function() {
+            $(this).on('click', function(e) {
+              e.preventDefault();
+              var scrollTo = $(this).attr('href');
+              var whitespace = scrollTo == '#s1' ? 70 : 30;
+              $('html,body').animate({
+                scrollTop: $(scrollTo).offset().top - whitespace
+              }, 1000);
+            });
+          });
+        });
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // инициализация слайдера
+              var slider = new SimpleAdaptiveSlider('.slider', {
+                autoplay: true,
+                interval: 10000,
+              });
+            });
+          </script>
 
 </head>
 <body>
@@ -38,27 +61,36 @@
     </div>
 </header>
 
+<nav class="h-menu">
+    <div class="container">
+        <a href="#s1">О компании</a>
+        <a href="#s2">Услуги</a>
+        <a href="#s3">Тренинги</a>
+        <a href="#s4">Оборудование</a>
+        <a href="#s5">Наши клиенты</a>
+    </div>
+</nav>
+
 
 <!-- slider -->
 
 <section class="slider">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="./images/general.svg" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="images/slider1.svg" alt="">
-            </div>
-          <div class="swiper-slide">
-                <img src="images/slider2.svg" alt="">
-          </div>
-          <div class="swiper-slide">
-                <img src="images/slider3.svg" alt="">
-          </div>
-        </div>
+    <img class='slider-img' src="./images/general.svg" />
+    <img class='slider-img' src="./images/slider1.svg" />
+    <img class='slider-img' src="./images/slider2.svg" />
+
+    <div>
+        <img style='opacity: 1; height: 50px' class="prev controlls" src="images/left.png" alt="">
+    </div>
+
+    <div>
+        <img style='opacity: 1; height: 50px'  class="next controlls" src="images/right.png" alt="">
+    </div>
+
 </section>
+
 <!-- about -->
-<section class="about">
+<section class="about" id="s1">
         <div class="row_about">
             <div class="about_title">
                 <h1>О компании</h1>
@@ -85,7 +117,7 @@
         </div>
 </section>
 <!-- service -->
-<section class="service">
+<section class="service" id="s2">
     <div class="row_service">
         <div class="service_title">
             <h1>Услуги</h1>
@@ -105,11 +137,13 @@
                 <li>IT Transportation Management System / планирования маршрутов доставки, авто планирование</li>
                 <li>Разработка Стандарта операционных процедур, регламентов, инструкций</li>
                 <li>Блок-схемы взаимодействия</li>
-                <li>Топология, определение особенностей зон по размещению техники, персонала, хранения и отбора;<br>
-                    безопасные зоны проезда транспорта и технологических проходов</li>
+                <li>Топология, определение особенностей зон по размещению техники, персонала, хранения и отбора; <br>
+                    <br>
+                   безопасные зоны проезда транспорта и технологических проходов</li>
                 <li>Отчетность, АВС анализ</li>
                 <li>Воркшоп, программы улучшений, минимизация рисков</li>
-                <li>Обучение по ОТ и ТБ, разработка полного пакета документации  Цифровой аудит, цифровая стратегия</li>
+                <li>Обучение по ОТ и ТБ, разработка полного пакета документации </li>
+                <li>Цифровой аудит, цифровая стратегия</li>
 
                 <h4>Преимущества:</h4>
                 <li>Оценка вариантов проекта, исходя из имеющегося бюджета</li>
@@ -146,34 +180,55 @@
                 <li>Обеспечение согласно требованиям по ОТ и ТБ</li>
                 <li>Оценка рисков</li>
 
-                <h4>Тренинги</h4>
-                <img src="./images/hr.svg" alt="">
-                
-                <h4>Сертификаты</h4>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./images/tren1.svg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="images/tren2.svg" alt="">
-                    </div>
-                  <div class="swiper-slide">
-                        <img src="images/tren3.svg" alt="">
-                  </div>
-                  <div class="swiper-slide">
-                        <img src="images/tren4.svg" alt="">
-                  </div>
-                </div>
-
             </div>
         </div>
 
-        <div class="accordion">
-            <div data-tab="tab-3" class="accordion_title" style="background-image: url(./images/slider6.svg)">
-                <h3>IT технологии и ресурсы</h3>
+        <div class="accordion" id="s3">
+            <div data-tab="tab-3" class="accordion_title" style="background-image: url(./images/slider7.svg)">
+                <h3>Тренинги</h3>
                 <span></span>
             </div>
             <div id="tab-3" class="accordion_content">
+                <h4>Списки тренингов</h4>
+                <li>Diversity & Inclusion</li>
+                <li>Инклюзивный лидер</li>
+                <li>Основы управления</li>
+                <li>Wellbeing</li>
+                <li>Управление изменениями</li>
+                <li>Управление аутсорсингом</li>
+                <li>Эффективность технологий</li>
+                <li>Разнообразие и интеграция в корпоративную культуру</li>
+                <li>Устранение неполадок в бизнесе</li>
+                <li>Управление бизнес-процессами</li>
+                <li>Бизнес-моделирование</li>
+                <li>Сравнительный анализ и анализ предприятия</li>
+                <li>Составление профиля персонала и сравнительный анализ эффективности</li>
+                <li>Составление профиля команды стартапов и сравнительный анализ совместимости</li>
+                <li>Управление карьерой и развитие</li>
+                <li>Корпоративная токсикология</li>
+                <li>Управление эффективностью работы персонала</li>
+                <li>Инновационная корпоративная культура</li>
+                <li>Цифровизация</li>
+                <li>Эффективное управление складской логистикой</li>
+                <li>Основы менеджмента и управление персоналом</li>
+                <h4>Сертификаты</h4>
+                <div class="l-wrapper">
+                    <ul class="rotation">
+                      <li class="rotation__item item--1"></li>
+                      <li class="rotation__item item--2"></li>
+                    </ul>
+                    
+                    <div class="progress"></div>
+                  </div>
+        </div>
+        </div>
+
+        <div class="accordion">
+            <div data-tab="tab-4" class="accordion_title" style="background-image: url(./images/slider6.svg)">
+                <h3>IT технологии и ресурсы</h3>
+                <span></span>
+            </div>
+            <div id="tab-4" class="accordion_content">
                 <h4>Продукты:</h4>
                 <li>Автоматизация процессов (Process automation)</li>
                 <li>Электронные наряд-заказы, видео аналитика и интеграция с системой клиента</li>
@@ -191,8 +246,8 @@
                 <h4>Преимущества:</h4>
                 <li>Подготовка ТЗ для Программного обеспечения</li>
                 <li>Разработка. Внедрение. Предоставление услуги Сервера</li>
-                <li>Разработка элементов автоматизации - конвейеры, умные погрузчики, cистемы автоматической загрузки, ТСД, штрих кодирование, RFID метки</li>
-                <li>Изучение технологии работы и составление программы обучения, работа с персоналом «в поле» на рабочем месте сотрудника, обучение персонала с, либо без отрывом от производства, тестирование</li>
+                <li>Разработка элементов автоматизации - конвейеры, умные погрузчики, cистемы автоматической загрузки, <br> <br>ТСД, штрих кодирование, RFID метки</li>
+                <li>Изучение технологии работы и составление программы обучения, работа с персоналом «в поле» на рабочем месте сотрудника, <br> <br> обучение персонала с, либо без отрывом от производства, тестирование</li>
                 <li>Разработка рекомендаций по улучшению действующего технологического процесса и программного обеспечения</li>
                 <li>Проработка системы видео-наблюдения и зон покрытия WI-FI</li>
                 <li>Монтаж. Сопровождение. Хранения и доступ к программному обеспечению, видеоархиву</li>
@@ -200,45 +255,88 @@
         </div>
     </div>
 </section>
-<!-- oborud -->
-<section class="oborud">
-    <div class="row_oborud">
-        <div class="oborud_title">
-            <h1>Оборудование</h1>
-        </div>
-        <div class="oborud_content">
-            <p>1- Технические средства, применяемые для механизации и&nbsp;автоматизации 
-                управленческих и&nbsp;инженерно-технических работ.</p> <br>
-            <p>Складская техника:</p>
 
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./images/robot1.svg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/robot2.svg" alt="">
-                </div>
-              <div class="swiper-slide">
-                    <img src="images/robot3.svg" alt="">
-              </div>
-              <div class="swiper-slide">
-                    <img src="images/robot4.svg" alt="">
-              </div>
+<!-- oborud -->
+
+<section class="oborud" id="s4">
+    <div class="row_oborud">
+        <div class="accordion">
+            <div data-tab="tab-5" class="accordion_title" style="background-image: url(./images/slider9.svg)">
+                <h3>Оборудование</h3>
+                <span></span>
             </div>
-            <p>Эти инновационные решения направлены на улучшение качества жизни, оптимизацию процессов и решение сложных проблем с использованием передовых технологий и подходов.</p>
+            <div id="tab-5" class="accordion_content">
+                <p>1- Технические средства, применяемые для механизации и&nbsp;автоматизации 
+                    управленческих и&nbsp;инженерно-технических работ.</p> <br>
+                    <div class="slider_container">
+                        <div class="slider_cont">
+                          <img src="./images/images (1).svg" alt="">
+                        </div>
+                      </div>
+                <p>Складская техника:</p>
+                      <img src="./images/oborud_sklad.png" alt="">
+                  <p>Эти инновационные решения направлены на улучшение качества жизни, оптимизацию процессов и решение сложных проблем с использованием передовых технологий и подходов.</p>
+            </div>
+        </div>
+        </div>
+</section>
+
+
+<section class="client" id="s5">
+    <div class="row_client">
+        <div class="accordion">
+            <div data-tab="tab-6" class="accordion_title" style="background-image: url(./images/slider2.svg)">
+                <h3>Наши клиенты</h3>
+                <span></span>
+            </div>
+            <div id="tab-6" class="accordion_content">
+            <img src="./images/kpi.svg" alt="">
+            <h4>ТОО «Казахстан Петрокемикал Индастриз Инк.» KPI Inc.</h4>
+            <p>В рамках проекта «AVVA Technologies» производит поставку оборудования и устройств для
+                автоматизации процесса перемещения паллетов с готовой продукцией и услугу по
+                предоставлению складского персонала для управления всей деятельностью склада готовой
+                продукции. <br> Так же полностью установка и оперирование: WMS (Система управления складом)</p>
+            
+            <img src="./images/HUAWEI.svg" alt="">
+            <h4>Huawei</h4>
+            <li>Разработана система адресного хранения</li>
+            <li>EDI между ERP клиента и WMS склада</li>
+            <li>100 % выполнение KPI</li>
+            <li>Разработана система приемки возвратного товара</li>
+            <li>Установлены системы пожарной безопасности и видеонаблюдения</li>
+            <li>100 % результат инвентаризации</li>
+            <li>Своевременность приемки и отгрузки</li>
+
+            <img src="./images/qaz.svg" alt="">
+            <h4>КазМунайГаз - АНЗП</h4>
+            <li>ЦИФРОВОЕ РЕШЕНИЕ ДЛЯ АНПЗ Логистический аудит</li>
+            <li>Аудит производственной логистики независимо от специфики предприятия этапы</li>
+            <li>Анализ, описание логистической системы в настоящий момент</li>
+            <li>На основании данных производится выявление уязвимых мест, то есть недостатков</li>
+            <li>Эксперты формируют тактику, рекомендуют меры для устранения выявленных слабых мест</li>
+            <li>Заявление приоритетов, что помогут достичь целевое состояние</li>
+
+            <img src="./images/philip.svg" alt="">
+            <h4>Philip Morris International</h4>
+            <li>Интегрированный поставщик логистики на заводе</li>
+            <li>Прием сырья и готовой продукции</li>
+            <li>Хранение и распределение готовой продукции</li>
+            <li>Распространение не табачных материалов</li>
+            <li>Управление погрузочно-разгрузочным</li>
+            <li>Фокус безопасности</li>
+            <li>Дизайн планировки склада</li>
+            <li>Предоставление персонала</li>
+            <li>Подробная отчетность по объему проделанной работы</li>
+            <li>Улучшение процессов</li>
+            <li>5S аудит по группе складов и рабочим местам</li>
+
+        </div>
         </div>
     </div>
 </section>
 <!-- footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="f-contacs">
-            <h4>E-mail: avvatech@avva-gr.com</h4>
-        </div>
 
-    </div>
-</footer>
+<script src="./js/main.js"> </script>
 
-    <script src="./js/main.js"> </script>
 </body>
 </html>
