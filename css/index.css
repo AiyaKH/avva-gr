@@ -278,7 +278,8 @@ a {
   .row_about,
   .row_service,
   .row_oborud,
-  .row_client{
+  .row_client,
+  .row_call{
     margin-left: 15px;
     margin-right: -15px;
     height: inherit;
@@ -430,8 +431,9 @@ a {
 }
 
 /* oborud */
-.oborud .accordion{
-    margin-top: 5%;
+
+.oborud{
+    margin-top: 50px;
 }
 .oborud .accordion_content p{
     margin-top: 80px;
@@ -456,12 +458,57 @@ a {
     max-width: 80%;
 }
 /* client */
-.client .accordion{
-    margin-top: 2%;
+.client{
+    margin-top: 50px;
 }
 .client .accordion_content p{
     color: black;
 }
 .client .accordion_content li{
     color: black;
+}
+
+/* call */
+.call{
+  margin-top: 50px;
+}
+.call legend{
+  margin-top: 20px;
+  font-size: 30px;
+    font-family: "Mulish";
+    font-weight: 600;
+    color: black;
+    line-height: 2;
+}
+.form-group label{
+  margin-top: 40px;
+  font-size: 25px;
+    font-family: "Mulish";
+    font-weight: 600;
+    color: #393E84;
+    line-height: 2;
+}
+.call input{
+width: 500px; 
+height: 50px; 
+background: #7e84d4;
+opacity: 100%;
+position: relative;
+border-radius: 10px;
+}
+::placeholder{
+  color: #fff;
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.call button{
+margin-top: 20px;
+align-items: center;
+width: 100px; 
+height: 50px; 
+background: #393E84;
+position: relative;
+border-radius: 10px;
 }
