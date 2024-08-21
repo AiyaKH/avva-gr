@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AVVA Technologies</title>
+    <meta name="title" content="AVVA Technologies" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script type="text/javascript">
+        $(function() {
+          $('.header a').each(function() {
+            $(this).on('click', function(e) {
+              e.preventDefault();
+              var scrollTo = $(this).attr('href');
+              var whitespace = scrollTo == '#s1' ? 70 : 30;
+              $('html,body').animate({
+                scrollTop: $(scrollTo).offset().top - whitespace
+              }, 1000);
+            });
+          });
+        });
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              // инициализация слайдера
+              var slider = new SimpleAdaptiveSlider('.slider', {
+                autoplay: true,
+                interval: 10000,
+              });
+            });
+          </script>
+
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="h-left">
+                    <div class="logo">
+                        <img width="149px" height="87px" src="./images/logo.svg" alt="">
+                    </div>
+                    <div class="h-siteslogan">
+                        AVVA&nbsp;Technologies
+                    </div>
+                </div>
+            </div>
+            <div class="lan">
+            <a href="./eng.html">Eng</a>
+            <a href="./index.html">Rus</a>
+            </div>
+            
+            <div class="col-xs-3"></div>
+            <div class="col-xs-3">
+                <div class="h-right">
+                    <a href="#s6" class="btn btn-red callModal">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="h-menu">
+    <div class="container">
+        <a href="#s1">About us</a>
+        <a href="#s2">Services</a>
+        <a href="#s3">Trainings</a>
+        <a href="#s4">Equipment</a>
+        <a href="#s5">Clients</a>
+    </div>
+</nav>
+
+
+<!-- slider -->
+
+<section class="slider">
+    <img class='slider-img' src="./images/general.svg" />
+    <img class='slider-img' src="./images/slider1.svg" />
+    <img class='slider-img' src="./images/slider2.svg" />
+
+    <div>
+        <img style='opacity: 1; height: 50px' class="prev controlls" src="images/left.png" alt="">
+    </div>
+
+    <div>
+        <img style='opacity: 1; height: 50px'  class="next controlls" src="images/right.png" alt="">
+    </div>
+
+</section>
+
+<!-- about -->
+<section class="about" id="s1">
+        <div class="row_about">
+            <div class="about_title">
+                <h1>About Us</h1>
+            </div>
+            <br>
+            <div class="about_content">
+                <div class="about_hello">
+                    <p>Welcome to our company <b class="content_bold">&laquo;ТОО AVVA Technologies&raquo;</b></p>
+                    <p>The company has been operating in the market since 2017 and is part of the international holding <br>
+                       <b class="content_bold">&laquo;Confiaza Logistics&raquo;&nbsp;&mdash; Spain.</b></p>
+                </div>
+                <br>
+                <p> <b class="content_bold">Our company&nbsp;&mdash;</b> It is a dynamic player in the technology market, rapidly evolving to provide clients with cutting-edge business solutions.
+                    <br> <br>
+                    We strive to leverage advanced technologies and automation, including artificial intelligence and data analytics, to optimize processes and ensure high efficiency and reliability for our clients. 
+                    <br> <br>
+                    Our team consists of experienced professionals ready to develop customized solutions tailored to the specific needs of each client.</p>
+            </div>
+            <div class="about_list">
+                <li>We conduct audits with the aim of improving, enhancing, and optimizing processes and costs in areas such as HR, IT, HSE (Health, Safety, and Environment), and logistics (planning, warehousing, delivery, and more).</li> <br>
+                <li>We develop digital and logistics strategies, as well as regulations and instructions, based on the processes and requirements of the Client.</li> <br>
+                <li>Using the obtained data, we offer the latest and most effective technologies, equipment, and resources to achieve long-term positive results.</li> <br>
+            </div>
+        </div>
+</section>
+<!-- service -->
+<section class="service" id="s2">
+    <div class="row_service">
+        <div class="service_title">
+            <h1>Services</h1>
+        </div>
+        <div class="accordion" >
+            <div data-tab="tab-1" class="accordion_title" style="background-image: url(./images/slider4.svg)">
+                <h3>Business processes and automation</h3>
+                <span></span>
+            </div>
+            <div id="tab-1" class="accordion_content">
+                <h4>Products:</h4>
+                <li>Digital Audit, Digital Strategy</li>
+                <li>5S Audit</li>
+                <li>Security Audit</li>
+                <li>IT program (Warehouse Management System)</li>
+                <li>IT program (Container Terminal Management System)</li>
+                <li>IT Transportation Management System</li>
+                <li>Development of Standard Operating Procedures, Regulations, and Instructions</li>
+                <li>Interaction Flowcharts</li>
+                <li>Topology, defining the features of areas for placing equipment, personnel, storage, and selection; <br>
+                    <br>
+                    safe zones for vehicle traffic and technological walkways</li>
+                <li>Reporting, ABC analysis</li>
+                <li>Workshop, improvement programs, risk minimization</li>
+                <li>Occupational Health and Safety training, development of a complete documentation package</li>
+
+                <h4>Advantages:</h4>
+                <li>Assessment of project options based on the available budget</li>
+                <li>Calculation of personnel and resource requirements</li>
+                <li>Calculation of additional project expenses</li>
+                <li>Calculation of IT resource, technology, and equipment requirements</li>
+                <li>A comprehensive analysis of material resources and technological standards will help 
+                    make the work as productive as possible.</li>
+            </div>
+        </div>
+        <div class="accordion">
+            <div data-tab="tab-2" class="accordion_title" style="background-image: url(./images/slider5.svg)">
+                <h3>HR Products</h3>
+                <span></span>
+            </div>
+            <div id="tab-2" class="accordion_content">
+                <h4>Products:</h4>
+                <li>HR process audit</li>
+                <li>Outsourcing, outstaffing, recruiting: the process of searching, attracting, and hiring qualified personnel</li>
+                <li>Personnel and payroll management/li>
+                <li>Automated document flow: application/selection/processing/acceptance/signing/termination</li>
+                <li>We will find qualified personnel</li>
+                <li>Development of regulatory and ethical standards within the company</li>
+                <li>Employee monitoring – online time tracking program</li>
+                <li>Training and professional development of staff</li>
+                <li>Conducts training sessions with staff to improve their skills and knowledge. 
+                    Upon successful completion, we issue certificates.</li>
+
+                <h4>Advantages:</h4>
+                <li> Automatic timesheet generation</li>
+                <li>Payroll calculation</li>
+                <li>Control, statistics, and reporting – effective processes</li>
+                <li>Organization of delivery and catering</li>
+                <li>Provision according to Occupational Health and Safety requirements</li>
+                <li>Risk assessment</li>
+
+            </div>
+        </div>
+
+        <div class="accordion" id="s3">
+            <div data-tab="tab-3" class="accordion_title" style="background-image: url(./images/slider7.svg)">
+                <h3>Tranings</h3>
+                <span></span>
+            </div>
+            <div id="tab-3" class="accordion_content">
+                <h4>Training lists</h4>
+                <li>Diversity & Inclusion</li>
+                <li>Inclusive leader</li>
+                <li>Fundamentals of management</li>
+                <li>Wellbeing</li>
+                <li>Change management</li>
+                <li>Outsourcing management</li>
+                <li>Technology effectiveness</li>
+                <li>Diversity and integration into corporate culture</li>
+                <li>Troubleshooting in business</li>
+                <li>Business process management</li>
+                <li>Business modeling</li>
+                <li>Comparative analysis and business analysis</li>
+                <li>Creating a staff profile and comparative analysis of effectiveness</li>
+                <li>Creating a startup team profile and comparative analysis of compatibility</li>
+                <li>Career management and development</li>
+                <li>Corporate toxicology</li>
+                <li>Employee performance management</li>
+                <li>Innovative corporate culture</li>
+                <li>Digitization</li>
+                <li>Effective warehouse logistics management</li>
+                <li>Fundamentals of management and personnel management</li>
+                <h4>Certificates</h4>
+                <div class="l-wrapper">
+                    <ul class="rotation">
+                      <li class="rotation__item item--1"></li>
+                      <li class="rotation__item item--2"></li>
+                    </ul>
+                    
+                    <div class="progress"></div>
+                  </div>
+        </div>
+        </div>
+
+        <div class="accordion">
+            <div data-tab="tab-4" class="accordion_title" style="background-image: url(./images/slider6.svg)">
+                <h3>IT technologies and resources</h3>
+                <span></span>
+            </div>
+            <div id="tab-4" class="accordion_content">
+                <h4>Products:</h4>
+                <li>Process automation</li>
+                <li>Electronic work orders, video analytics, and integration with the client’s system</li>
+                <li>Artificial Intelligence (AI)</li>
+                <li>Internet resources (IoT) </li>
+                <li>Cloud computing</li>
+                <li>Blockchain</li>
+                <li>Cybersecurity</li>
+                <li>System and application software tools</li>
+                <li> IT</li>
+                <li>Organizational and methodological support</li>
+
+                <p>Each of these technologies and resources plays a crucial role in the development of the modern IT industry, providing unique opportunities for innovation and company growth.</p>
+
+                <h4>Advantages:</h4>
+                <li>Preparation of technical specifications for the Software</li>
+                <li>Development. Implementation. Providing Server service</li>
+                <li>Development of automation elements - conveyors, smart loaders, automatic loading systems, <br> <br>TSD, barcoding, RFID tags</li>
+                <li>Studying work technology and drawing up a training program, working with personnel “in the field” at the employee’s workplace, <br> <br> personnel training with or without interruption of production, testing</li>
+                <li>Development of recommendations for improving the current technological process and software</li>
+                <li>Development of a video surveillance system and WI-FI coverage areas</li>
+                <li>Installation. Escort. Storage and access to software, video archive</li>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- oborud -->
+
+<section class="oborud" id="s4">
+    <div class="row_oborud">
+        <div class="accordion">
+            <div data-tab="tab-5" class="accordion_title" style="background-image: url(./images/slider9.svg)">
+                <h3>Equipment</h3>
+                <span></span>
+            </div>
+            <div id="tab-5" class="accordion_content">
+                <p>1- Technical means used for mechanization and automation 
+                    management and&nbsp;engineering and technical work.</p> <br>
+                    <div class="slider_container">
+                        <div class="slider_cont">
+                          <img src="./images/images (1).svg" alt="">
+                        </div>
+                      </div>
+                <p>Warehouse equipment:</p>
+                      <img src="./images/oborud_sklad.png" alt="">
+                  <p>These innovative solutions aim to improve quality of life, optimize processes and solve complex problems using advanced technologies and approaches.</p>
+            </div>
+        </div>
+        </div>
+</section>
+
+
+<section class="client" id="s5">
+    <div class="row_client">
+        <div class="accordion">
+            <div data-tab="tab-6" class="accordion_title" style="background-image: url(./images/slider2.svg)">
+                <h3>Our Clients</h3>
+                <span></span>
+            </div>
+            <div id="tab-6" class="accordion_content">
+            <div class="kpi">
+                <img src="./images/kpi.svg" alt="">
+                <h4>ТОО KPI Inc.</h4>
+            </div>
+            <p>As part of the project, AVVA Technologies supplies equipment and devices for
+                automation of the process of moving pallets with finished products and services for
+                providing warehouse personnel to manage all finished goods warehouse activities
+                products. <br> Also fully installed and operated: WMS (Warehouse Management System)</p>
+            
+                <div class="kpi">
+                    <img src="./images/HUAWEI.svg" alt="">
+                    <h4>Huawei</h4>
+                </div>
+            <li>Address storage system developed</li>
+            <li>EDI between the client's ERP and the warehouse WMS</li>
+            <li>100% KPI fulfillment</li>
+            <li>A return goods acceptance system has been developed</li>
+            <li>Fire safety and video surveillance systems installed</li>
+            <li>100% inventory result</li>
+            <li>Timely acceptance and shipment</li>
+
+            <div class="kpi">
+                <img src="./images/qaz.svg" alt="">
+                <h4>KazMunayGas - AZP</h4>
+            </div>
+            
+            <li>DIGITAL SOLUTION FOR Atyrau Refinery Logistics audit</li>
+            <li>Audit of production logistics regardless of the specifics of the enterprise stages</li>
+            <li>Analysis, description of the current logistics system</li>
+            <li>Based on the data, vulnerabilities, that is, shortcomings, are identified</li>
+            <li>Experts formulate tactics and recommend measures to eliminate identified weaknesses</li>
+            <li>Statement of priorities that will help achieve the target state</li>
+
+            <div class="kpi">
+                <img src="./images/philip.svg" alt="">
+                <h4>Philip Morris International</h4>
+            </div>
+            
+            <li>Integrated logistics provider at the plant</li>
+            <li>Reception of raw materials and finished products</li>
+            <li>Storage and distribution of finished products</li>
+            <li>Distribution of non-tobacco materials</li>
+            <li>Loading and unloading control</li>
+            <li>Security Focus</li>
+            <li>Warehouse layout design</li>
+            <li>Providing personnel</li>
+            <li>Detailed reporting on the amount of work done</li>
+            <li>Process improvement</li>
+            <li>5S audit for a group of warehouses and workplaces</li>
+
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="call" id="s6">
+<div class="row_call">
+    <div class="accordion">
+        <div data-tab="tab-7" class="accordion_title" style="background-image: url(./images/slider3.svg)">
+            <h3>Leave a request</h3>
+            <span></span>
+        </div>
+        <div id="tab-7" class="accordion_content">
+            <div class="col-x-7">
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="cf2c2b1f-be59-45a1-8b10-e5cc176daf10">
+
+            <span>Your name</span>
+            <input type="text" name="name" id="" class="box" required placeholder="Enter your name.." autocomplete="off">
+
+            <span>Your email</span>
+            <input type="email" name="email" id="" class="box" required placeholder="Enter your email.." autocomplete="off">
+
+            <span>Your number</span>
+            <input type="number" name="number" id="" class="box" required placeholder="Enter your number.." autocomplete="off">
+            <input type="submit" value="Send data" class="btn" name="send">
+
+            </form>
+            </div>
+    </div>
+    </div>
+</div>
+</section>
+
+
+<script src="./js/main.js"> </script>
+
+</body>
+</html>
