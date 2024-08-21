@@ -51,6 +51,11 @@
                     </div>
                 </div>
             </div>
+            <div class="lan">
+            <a href="./eng.html">Eng</a>
+            <a href="./index.html">Rus</a>
+            </div>
+            
             <div class="col-xs-3"></div>
             <div class="col-xs-3">
                 <div class="h-right">
@@ -290,15 +295,19 @@
                 <span></span>
             </div>
             <div id="tab-6" class="accordion_content">
-            <img src="./images/kpi.svg" alt="">
-            <h4>ТОО «Казахстан Петрокемикал Индастриз Инк.» KPI Inc.</h4>
+            <div class="kpi">
+                <img src="./images/kpi.svg" alt="">
+                <h4>ТОО «Казахстан Петрокемикал Индастриз Инк.» KPI Inc.</h4>
+            </div>
             <p>В рамках проекта «AVVA Technologies» производит поставку оборудования и устройств для
                 автоматизации процесса перемещения паллетов с готовой продукцией и услугу по
                 предоставлению складского персонала для управления всей деятельностью склада готовой
                 продукции. <br> Так же полностью установка и оперирование: WMS (Система управления складом)</p>
             
-            <img src="./images/HUAWEI.svg" alt="">
-            <h4>Huawei</h4>
+                <div class="kpi">
+                    <img src="./images/HUAWEI.svg" alt="">
+                    <h4>Huawei</h4>
+                </div>
             <li>Разработана система адресного хранения</li>
             <li>EDI между ERP клиента и WMS склада</li>
             <li>100 % выполнение KPI</li>
@@ -307,8 +316,11 @@
             <li>100 % результат инвентаризации</li>
             <li>Своевременность приемки и отгрузки</li>
 
-            <img src="./images/qaz.svg" alt="">
-            <h4>КазМунайГаз - АНЗП</h4>
+            <div class="kpi">
+                <img src="./images/qaz.svg" alt="">
+                <h4>КазМунайГаз - АНЗП</h4>
+            </div>
+            
             <li>ЦИФРОВОЕ РЕШЕНИЕ ДЛЯ АНПЗ Логистический аудит</li>
             <li>Аудит производственной логистики независимо от специфики предприятия этапы</li>
             <li>Анализ, описание логистической системы в настоящий момент</li>
@@ -316,8 +328,11 @@
             <li>Эксперты формируют тактику, рекомендуют меры для устранения выявленных слабых мест</li>
             <li>Заявление приоритетов, что помогут достичь целевое состояние</li>
 
-            <img src="./images/philip.svg" alt="">
-            <h4>Philip Morris International</h4>
+            <div class="kpi">
+                <img src="./images/philip.svg" alt="">
+                <h4>Philip Morris International</h4>
+            </div>
+            
             <li>Интегрированный поставщик логистики на заводе</li>
             <li>Прием сырья и готовой продукции</li>
             <li>Хранение и распределение готовой продукции</li>
@@ -344,26 +359,22 @@
         </div>
         <div id="tab-7" class="accordion_content">
             <div class="col-x-7">
-                <form action="mail.php" method="post">
-                    <legend>Мы свяжемся с вами в ближайшее время</legend>
 
-                    <div class="form-group">
-                        <label for="">Введите ваше имя</label> <br>
-                        <input type="text" class="form-control" id="" name="user_name" placeholder="Например, Иван">
-                    </div>
-                
-                    <div class="form-group">
-                        <label for="">Введите номер телефона</label> <br>
-                        <input type="text" class="form-control" id="" name="user_phone" placeholder="+7 (999) 99 99 999">
-                    </div>
-                
-                    <div class="form-group">
-                        <label for="">Введите email</label> <br>
-                        <input type="text" class="form-control" id="" name="user_email" placeholder="mail@mail.ru">
-                    </div>
-                
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="cf2c2b1f-be59-45a1-8b10-e5cc176daf10">
+
+            <span>Your name</span>
+            <input type="text" name="name" id="" class="box" required placeholder="Enter your name.." autocomplete="off">
+
+            <span>Your email</span>
+            <input type="email" name="email" id="" class="box" required placeholder="Enter your email.." autocomplete="off">
+
+            <span>Your number</span>
+            <input type="number" name="number" id="" class="box" required placeholder="Enter your number.." autocomplete="off">
+            <input type="submit" value="Send data" class="btn" name="send">
+
+            </form>
             </div>
     </div>
     </div>
